@@ -7,8 +7,7 @@ class ZendvnMp{
 		//=====================================================
 		//Hiển thị các Action đang thực thi trong Hook
 		//=====================================================
-		add_action('wp_footer', array($this,'showFunction'));		
-		
+		add_action('wp_footer', array($this,'showFunction'));				
 		
 	}
 		

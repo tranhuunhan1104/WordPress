@@ -31,7 +31,7 @@ class HtmlButton{
 		}
 		
 		//Tạo phần tử HTML
-		$html = '<input class="btn btn-primary" type="' . $type .'" name="'. $name . '" ' . $strAttr . ' value="' . $value . '" />';
+		$html = '<input type="' . $type .'" name="'. $name . '" ' . $strAttr . ' value="' . $value . '" />';
 	
 		return $html;
 	}

@@ -7,7 +7,7 @@ class ZendvnMpSupport{
 		if ($tag) {
 			$hook[$tag]=$wp_filter[$tag];
 			if (!is_array($hook[$tag])) {
-				// trigger_error("Nothing found for '$tag' hook", E_USER_WARNING);
+				trigger_error("Nothing found for '$tag' hook", E_USER_WARNING);
 				return;
 			}
 		}
