@@ -24,18 +24,16 @@ if(!is_admin()){
 }else{
 	require_once ZENDVN_MP_INCLUDES_DIR . '/html.php';
 	require_once ZENDVN_MP_PLUGIN_DIR . '/admin.php';
-	new ZendvnMpAdmin();
+	new ZendvnMpAdmin();	
 	
-	require_once ZENDVN_MP_WIDGET_DIR . '/db_simple.php';
-	new ZendvnMp_Widget_Db_Simple();
-	
+}
 
-	
+require_once ZENDVN_MP_WIDGET_DIR . '/last_post.php';
+
+function last_post_widget_init(){
+	register_widget('Zendvn_Mp_Widget_Last_Post');
 }
-require_once ZENDVN_MP_WIDGET_DIR . '/simple.php';
-new Zendvn_Mp_Widget_Simple();
-add_action('widgets_init','Zendvn_Mp_Widget_Simple');
-function Zendvn_Mp_Widget_Simple(){
-		register_widget('Zendvn_Mp_Widget_Simple');
-}
+
+add_action('widgets_init','last_post_widget_init');
+
 

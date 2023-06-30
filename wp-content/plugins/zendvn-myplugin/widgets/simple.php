@@ -11,33 +11,7 @@ class Zendvn_Mp_Widget_Simple extends WP_Widget {
 				);
 		$control_options = array('width'=>'250px');
 		parent::__construct($id_base, $name,$widget_options, $control_options);
-		
-		/* wp_enqueue_style('my_stylesheet',
-						ZENDVN_MP_CSS_URL . '/abc.css',array(),'1.0');
-		
-		$handle = 'my_stylesheet';
-		if (wp_style_is( $handle)) {
-			echo 'ton tai tap tin ' . $handle;
-		} else {
-			echo 'Khong ton tai tap tin ' . $handle;
-		} */
-		
-		/* wp_enqueue_script('zendvn_js123',
-					ZENDVN_MP_JS_URL . '/abc123.js',array('jquery'),'1.0',false);
-		
-		$handle = 'jquery';
-		if (wp_script_is( $handle)) {
-			echo 'ton tai tap tin ' . $handle;
-		} else {
-			echo 'Khong ton tai tap tin ' . $handle;
-		} */
-		
-		if(!empty(is_active_widget(false, false,$id_base,true))){
-			wp_enqueue_style('my_stylesheet',
-							ZENDVN_MP_CSS_URL . '/abc.css',array(),'1.0');
-			wp_enqueue_script('zendvn_js123',
-							ZENDVN_MP_JS_URL . '/abc123.js',array('jquery'),'1.0',false);
-		}
+	
 
 	}	
 		
@@ -80,44 +54,43 @@ class Zendvn_Mp_Widget_Simple extends WP_Widget {
 			/* echo '<pre>';
 			print_r($instance);
 			echo '</pre>'; */
-			echo "abcdefghiklmn";
-			// $htmlObj =  new ZendvnHtml();
+			$htmlObj =  new ZendvnHtml();
 			
-			// //Tao phan tu chua Title
-			// $inputID 	= $this->get_field_id('title');
-			// $inputName 	= $this->get_field_name('title');
-			// $inputValue = @$instance['title'];
-			// $arr = array('class' =>'widefat','id' => $inputID);			
-			// echo '<p><label for="' . $inputID . '">' . translate('Title') . '</label>'
-			// 	  . $htmlObj->textbox($inputName,$inputValue,$arr) 
-			// 	  . '</p>';
+			//Tao phan tu chua Title
+			$inputID 	= $this->get_field_id('title');
+			$inputName 	= $this->get_field_name('title');
+			$inputValue = @$instance['title'];
+			$arr = array('class' =>'widefat','id' => $inputID);			
+			echo '<p><label for="' . $inputID . '">' . translate('Title') . '</label>'
+				  . $htmlObj->textbox($inputName,$inputValue,$arr) 
+				  . '</p>';
 			
-			// //Tao phan tu chua Movie
-			// $inputID 	= $this->get_field_id('movie');
-			// $inputName 	= $this->get_field_name('movie');
-			// $inputValue = @$instance['movie'];
-			// $arr = array('class' =>'widefat','id' => $inputID);
-			// echo '<p><label for="' . $inputID . '">' . translate('Movie') . '</label>'
-			// . $htmlObj->textbox($inputName,$inputValue,$arr)
-			// . '</p>';
+			//Tao phan tu chua Movie
+			$inputID 	= $this->get_field_id('movie');
+			$inputName 	= $this->get_field_name('movie');
+			$inputValue = @$instance['movie'];
+			$arr = array('class' =>'widefat','id' => $inputID);
+			echo '<p><label for="' . $inputID . '">' . translate('Movie') . '</label>'
+			. $htmlObj->textbox($inputName,$inputValue,$arr)
+			. '</p>';
 			
-			// //Tao phan tu chua Song
-			// $inputID 	= $this->get_field_id('song');
-			// $inputName 	= $this->get_field_name('song');
-			// $inputValue = @$instance['song'];
-			// $arr = array('class' =>'widefat','id' => $inputID);
-			// echo '<p><label for="' . $inputID . '">' . translate('Song') . '</label>'
-			// . $htmlObj->textbox($inputName,$inputValue,$arr)
-			// . '</p>';
+			//Tao phan tu chua Song
+			$inputID 	= $this->get_field_id('song');
+			$inputName 	= $this->get_field_name('song');
+			$inputValue = @$instance['song'];
+			$arr = array('class' =>'widefat','id' => $inputID);
+			echo '<p><label for="' . $inputID . '">' . translate('Song') . '</label>'
+			. $htmlObj->textbox($inputName,$inputValue,$arr)
+			. '</p>';
 		
-			// //Tao phan tu chua CSS
-			// $inputID 	= $this->get_field_id('css');
-			// $inputName 	= $this->get_field_name('css');
-			// $inputValue = @$instance['css'];
-			// $arr = array('class' =>'widefat','id' => $inputID);
-			// echo '<p><label for="' . $inputID . '">' . translate('Css class') . '</label>'
-			// . $htmlObj->textbox($inputName,$inputValue,$arr)
-			// . '</p>';
+			//Tao phan tu chua CSS
+			$inputID 	= $this->get_field_id('css');
+			$inputName 	= $this->get_field_name('css');
+			$inputValue = @$instance['css'];
+			$arr = array('class' =>'widefat','id' => $inputID);
+			echo '<p><label for="' . $inputID . '">' . translate('Css class') . '</label>'
+			. $htmlObj->textbox($inputName,$inputValue,$arr)
+			. '</p>';
 	}
 	
 
