@@ -23,3 +23,12 @@ include_once $theme_dir.'/inc/shortcodes.php';
 
 // Đăng ký chức năng tìm kiếm, sắp xếp cho theme
 include_once $theme_dir.'/ecommerce/inc/search.php';
+
+// Đăng ký ajjax
+include_once $theme_dir.'/ecommerce/inc/ajaxs.php';
+
+// Đăng ký them vao gio hang
+include_once $theme_dir.'/ecommerce/inc/Wp_Cart.php';
+
+// Đăng ký them vao gio hang
+include_once $theme_dir.'/ecommerce/inc/shortcodes.php';

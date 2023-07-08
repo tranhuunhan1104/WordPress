@@ -28,7 +28,13 @@
         wp_enqueue_script($theme_prefix.'-mixitup-min',$theme_uri.'/js/mixitup.min.js',[],$theme_version,true);
         wp_enqueue_script($theme_prefix.'-owl-carousel-min',$theme_uri.'/js/owl.carousel.min.js',[],$theme_version,true);
         wp_enqueue_script($theme_prefix.'-main',$theme_uri.'/js/main.js',[],$theme_version,true);
-        wp_enqueue_script($theme_prefix.'-custom',$theme_uri.'/custom.js',[],$theme_version,true);
+        wp_enqueue_script($theme_prefix.'-custom-js',$theme_uri.'/custom.js',[],$theme_version,true);
+        wp_localize_script($theme_prefix.'-custom-js', 'custom_js_object',
+		array( 
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+            'nonce' => wp_create_nonce('wp2023_add_to_cart')
+		)
+	);
       
     }
 

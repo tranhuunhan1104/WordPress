@@ -4,7 +4,6 @@ if( $order_id ){
     $objWp2023Order = new Wp2023Order();
     $order = $objWp2023Order->find($order_id);
     $order_items = $objWp2023Order->order_items($order_id);
-    pr($order_items);
 }    
 
 if( isset( $_POST['wp2023_save_order'] ) ){
