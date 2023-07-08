@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+/*
+ Theme Name:   My theme - Twenty Ten Child
+ Theme URI:    http://www.zend.vn/twenty-ten-child/
+ Description:  Mot theme ke thua tu Twentyten theme
+ Author:       KhanhPham
+ Author URI:   http://www.zend.vn
+ Template:     twentyten
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fourteen-child
+*/
+
+@import url('../twentyten/style.css');

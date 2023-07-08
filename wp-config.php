@@ -66,6 +66,7 @@ define( 'DB_COLLATE', '' );
  * a unique prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix = 'wp_';
+define( 'WPCF7_AUTOP', false );
 
 /**
  * For developers: WordPress debugging mode.
