@@ -1,4 +1,27 @@
 console.log(custom_js_object);
+get_cart();
+
+function initInputQty(){
+    var proQty = jQuery('.pro-qtyy');
+    proQty.prepend('<span class="dec qtybtn">-</span>');
+    proQty.append('<span class="inc qtybtn">+</span>');
+    proQty.on('click', '.qtybtn', function () {
+        var $button = jQuery(this);
+        var oldValue = $button.parent().find('input').val();
+        if ($button.hasClass('inc')) {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            // Don't allow decrementing below zero
+            if (oldValue > 0) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 0;
+            }
+        }
+        $button.parent().find('input').val(newVal);
+    });
+}
+
 function update_cart(){
     let options = {
         url: custom_js_object. ajaxurl+'?action=wp2023_update_cart' ,
@@ -6,11 +29,26 @@ function update_cart(){
         dataType: 'json',
         data: jQuery('#form-cart').serialize(),
         success : function(res){
-            console.log(res);
+            get_cart();
         },
     }
     jQuery.ajax(options);
 }
+function get_cart(){
+    let options = {
+        url : custom_js_object.ajaxurl+'?action=wp2023_get_cart',
+        method: 'GET',
+        dataType: 'json',
+        success: function(res){
+            jQuery('#cart_content').html(res.fragments.cart_html);
+            jQuery('.cart_total_format').html(res.fragments.cart_total_format);
+            jQuery('.cart_count').html(res.fragments.cart_count);
+            initInputQty();
+        }
+    }
+    jQuery.ajax(options); 
+}
+
 function add_to_cart(){
     let product_qty = jQuery('#product_qty').val();
     let product_id = jQuery('#product_id').val();

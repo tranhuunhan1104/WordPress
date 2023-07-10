@@ -1,0 +1,46 @@
+2023-07-10T04:28:10+00:00 CRITICAL Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in C:\xampp\htdocs\wordpress\wp-content\plugins\wordpress2023\includes\admin_columns.php:20
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\plugins\wordpress2023\includes\admin_columns.php(20): number_format('')
+#1 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(308): wp2023_admin_columns_product_render_columns('product_price', 327)
+#2 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-posts-list-table.php(1369): do_action('manage_product_...', 'product_price', 327)
+#5 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-list-table.php(1559): WP_Posts_List_Table->column_default(Object(WP_Post), 'product_price')
+#6 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-posts-list-table.php(1403): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-posts-list-table.php(813): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-posts-list-table.php(789): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-list-table.php(1471): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-list-table.php(1398): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\wordpress\wp-admin\edit.php(487): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-content\plugins\wordpress2023\includes\admin_columns.php on line 20
+
+2023-07-10T04:28:24+00:00 CRITICAL Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in C:\xampp\htdocs\wordpress\wp-content\plugins\wordpress2023\includes\admin_columns.php:20
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\plugins\wordpress2023\includes\admin_columns.php(20): number_format('')
+#1 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(308): wp2023_admin_columns_product_render_columns('product_price', 328)
+#2 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-posts-list-table.php(1369): do_action('manage_product_...', 'product_price', 328)
+#5 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-list-table.php(1559): WP_Posts_List_Table->column_default(Object(WP_Post), 'product_price')
+#6 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-posts-list-table.php(1403): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-posts-list-table.php(813): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-posts-list-table.php(789): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-list-table.php(1471): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\wordpress\wp-admin\includes\class-wp-list-table.php(1398): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\wordpress\wp-admin\edit.php(487): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-content\plugins\wordpress2023\includes\admin_columns.php on line 20
+
+2023-07-10T06:38:31+00:00 CRITICAL Uncaught Error: Call to undefined function flatsome_html_classes() in C:\xampp\htdocs\wordpress\wp-content\themes\flatsome\header.php:2
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-includes\template.php(783): require_once()
+#1 C:\xampp\htdocs\wordpress\wp-includes\template.php(718): load_template('C:\\xampp\\htdocs...', true, Array)
+#2 C:\xampp\htdocs\wordpress\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\xampp\htdocs\wordpress\wp-content\themes\flatsome\page-blank.php(5): get_header()
+#4 C:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\wordpress\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-content\themes\flatsome\header.php on line 2
+
