@@ -1,0 +1,4 @@
+2023-07-14T10:12:03+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\wordpress\wp-includes\class-wpdb.php on line 2431
+
+2023-07-14T10:14:18+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\wordpress\wp-includes\class-wpdb.php on line 2431
+

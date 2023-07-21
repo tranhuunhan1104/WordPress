@@ -1,5 +1,5 @@
 <?php
-define('WP-abc','Hello Word');
-define('WP_SITEURL','http://localhost/wordpress');
-define('WP_HOME','http://localhost/');
-define('SAVEQUERIES','true');
+define('WP-abc', 'Hello Word');
+define('WP_SITEURL', 'http://tranningwordpress.com');
+define('WP_HOME', 'http://tranningwordpress.com');
+define('SAVEQUERIES', 'true');
